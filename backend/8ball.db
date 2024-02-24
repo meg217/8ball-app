@@ -1,0 +1,10 @@
+CREATE TABLE questions (
+    id INTEGER PRIMARY KEY,
+    question TEXT NOT NULL
+);
+INSERT INTO questions (question) VALUES
+('Will I get a promotion at work?'),
+('Should I take that vacation?'),
+('Will it rain tomorrow?'),
+('Is it a good time to invest in stocks?'),
+('Will I meet someone special soon?');
