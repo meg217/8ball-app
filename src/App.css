@@ -41,3 +41,64 @@
     transform: rotate(360deg);
   }
 }
+
+
+video {
+  width: 100%;
+  flex: auto;
+  max-width: 800px; 
+  height: auto;
+  margin: auto; 
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+  margin: 20px auto; /* Center the video */
+}
+
+.magic-8-ball {
+  width: 120px; /* Adjust size as needed */
+  height: 120px; /* Adjust size as needed */
+  background-color: #f0f0f0;
+  border-radius: 50%; /* Make it circular */
+  position: relative;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-5deg); }
+  50% { transform: translateX(5px) rotate(5deg); }
+  75% { transform: translateX(-5px) rotate(-5deg); }
+  100% { transform: translateX(0); }
+}
+
+.response {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.question {
+  margin: 20px 0;
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px; /* Adjust font size as needed */
+  cursor: pointer;
+  background-color: #007bff; /* Adjust color as needed */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Adjust color as needed */
+}

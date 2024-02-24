@@ -6,7 +6,7 @@ import random
 app = Flask(__name__)
 
 # API endpoint to get random question
-@app.route('/', methods=['GET'])
+@app.route('/api/question', methods=['GET'])
 def get_random_question():
     with sqlite3.connect('8ball.db') as conn:
         cursor = conn.cursor()
