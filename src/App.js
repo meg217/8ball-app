@@ -25,7 +25,7 @@ function App() {
       <button onClick={getNextQuestion}>Next Question</button>
       <div className="question">{question}</div>
       {/* Add 8 ball component with shake animation */}
-    </div>
+    </div> 
   );
 }
 
