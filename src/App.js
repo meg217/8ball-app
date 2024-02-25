@@ -147,6 +147,9 @@ function App() {
         </div>
       ) : (
         <div class="containerA">
+                    <audio controls={false} volume={0.5} autoPlay loop>
+            <source src="./assets/soundtrack.mp3" type="audio/mp3" />
+          </audio>
           {/* Title screen */}
           <img
             class="Title_image"
