@@ -33,6 +33,16 @@
   align-items: center;
   height: 100vh; /* Adjust this value as needed */
   overflow: hidden; /* Prevent horizontal scrolling */
+  position:relative;
+}
+
+.absolute_container{
+  height: auto;
+  width: auto;
+  position: absolute;
+  bottom: -10%;
+  left: 50%; 
+  transform: translateX(-50%);
 }
 .Title_Image {
   max-width: 100%; /* Ensure image doesn't exceed container width */
@@ -97,6 +107,22 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 16px; /* Adjust font size as needed */
+}
+
+.questionContainer{
+  position: absolute;
+  margin-top: -600px;
+  margin-left: -200px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.eightBallResponse{
+  position: absolute;
+  margin-top: 200px;
+  font-weight: bold;
+  color: white;
+
 }
 
 .question {

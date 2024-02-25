@@ -73,14 +73,20 @@ function App() {
         <div class="game-screen">
           {/* Game screen content */}
           <h2>Game Screen</h2>
+          <div class="container">
+            <img src="Dino_Background.png"></img>
+            <div class="absolute_container">
+            <img src="Dino_Hands.png"></img>
+            </div>
           <div class="questionContainer">
             <p> {question} </p>
           </div>
           <button onClick={handleMagic8BallClick}>Ask Magic 8 Ball</button>
-          <div class="8ballResponse">
-            {response && <p>Magic 8 Ball says: {response}</p>}
+          <div class="eightBallResponse">
+            {response && <p>{response}</p>}
           </div>
           <button onClick={handleNextQuestionClick}>Next Question</button>
+          </div>
         </div>
       ) : (
         <div class="container">
