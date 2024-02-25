@@ -61,9 +61,7 @@ function App() {
   const handlePlayClick = () => {
     setShowStoryIntro(true);
   };
-  const handleBackClick = () => {
-    setShowStoryIntro(false);
-  };
+
   const handleKeyDown = (event) => {
     // Check if the Enter key is pressed
     if (event.key === "Enter") {
@@ -79,9 +77,9 @@ function App() {
     <div className="App">
       {showStoryIntro ? (
         <div>
-          {/* Story Video Intro content */}
+          {/* pre-game story video */}
           <video
-            src="/assets/LastQuestionsofaDino.mp4"
+            src="/assets/Copy of LastQuestionsofaDino (1).mp4"
             type="video/mp4"
             autoPlay
             onEnded={handleVideoEnd}
@@ -108,11 +106,11 @@ function App() {
                   {showTextInput && (
                     <label>
                       Question:
-                      <input
+                      <textarea
+                        placeholder="Type your question here or generate a random question using the button below."
                         id="questionInput"
-                        type="text"
                         onKeyDown={handleKeyDown}
-                      />
+                      ></textarea>
                     </label>
                   )}
                 </div>
@@ -149,7 +147,7 @@ function App() {
         </div>
       ) : (
         <div class="containerA">
-          {/* Title Screen */}
+          {/* Title screen */}
           <img
             class="Title_image"
             src="/assets/Title.png"
