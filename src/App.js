@@ -13,12 +13,26 @@ function App() {
   const [isShaking, setIsShaking] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [showTextInput, setShowTextInput] = useState(false);
+  const [audioLoaded, setAudioLoaded] = useState(false);
+
+  
 
   useEffect(() => {
     console.log("Question state:", question);
     fetchQuestion();
     setIsButtonDisabled(false);
   }, []);
+
+  const loadAudio = () => {
+    if (!audioLoaded) {
+      const audio = new Audio("./assets/soundtrack.mp3");
+      audio.volume = 0.5;
+      audio.loop = true;
+      audio.autoplay = true;
+      audio.load();
+      setAudioLoaded(true);
+    }
+  };
 
   const fetchQuestion = () => {
     axios
@@ -147,9 +161,6 @@ function App() {
         </div>
       ) : (
         <div class="containerA">
-                    <audio controls={false} volume={0.5} autoPlay loop>
-            <source src="./assets/soundtrack.mp3" type="audio/mp3" />
-          </audio>
           {/* Title screen */}
           <img
             class="Title_image"
@@ -157,6 +168,7 @@ function App() {
             type="png"
             alt="Title Screen"
           />
+          {loadAudio()}
           <audio preload="auto" controls={false} volume={0.5} autoPlay loop>
             <source src="./assets/soundtrack.mp3" type="audio/mp3" />
           </audio>
