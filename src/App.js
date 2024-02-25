@@ -131,7 +131,7 @@ function App() {
                     className="Random_Q_Button"
                     onClick={handleNextQuestionClick}
                   >
-                    Random Question
+                    Randomize Question
                   </button>
                 </div>
               </div>
