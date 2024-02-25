@@ -68,7 +68,7 @@ function App() {
   return (
     <div className="App">
       {showStoryIntro ? (
-        <div class="container">
+        <div class="containerA">
           {/* Story Video Intro content */}
           <video
             src="/assets/LastQuestionsofaDino.mp4"
@@ -80,35 +80,47 @@ function App() {
           {/*<button onClick={handleBackClick}>Main Menu</button>*/}
         </div>
       ) : showGameScreen ? (
-        <div class="game-screen">
+        <div className="game-screen">
           {/* Game screen content */}
-          <div class="container">
-            <div class="background_container">
-              <img src="Dino_Background.png"></img>
+          <div className="containerB">
+            <div className="background_container">
+              <img src="Dino_Background.png" alt="Dino Background" />
             </div>
             <div className="absolute_container">
               <div className={`Dino_Hands ${isShaking ? "shaking" : ""}`}>
                 <img src="Dino_Hands.png" alt="Dino Hands" />
               </div>
+              <div className="questionContainer">
+                <p>{question}</p>
+                <div class="two_questions">
+                  <button
+                    className="Ask_Ball_Button"
+                    onClick={handleMagic8BallClick}
+                    disabled={isButtonDisabled}
+                    style={{
+                      backgroundColor: isButtonDisabled ? "gray" : "#007bff",
+                    }}
+                  >
+                    SHAKE
+                  </button>
+                  <button
+                    className="Random_Q_Button"
+                    onClick={handleNextQuestionClick}
+                  >
+                    Random Question
+                  </button>
+                </div>
+              </div>
+              {response && (
+                <div className="eightBallResponse">
+                  <p>{response}</p>
+                </div>
+              )}
             </div>
-            <div class="questionContainer">
-              <p> {question} </p>
-              <button
-                class="Ask_Ball_Button"
-                onClick={handleMagic8BallClick}
-                disabled={isButtonDisabled}
-              >
-                SHAKE
-              </button>
-              <button class="Random_Q_Button" onClick={handleNextQuestionClick}>
-                Random Question
-              </button>
-            </div>
-            <div class="eightBallResponse">{response && <p>{response}</p>}</div>
           </div>
         </div>
       ) : (
-        <div class="container">
+        <div class="containerA">
           {/* Title Screen */}
           <img
             class="Title_image"
