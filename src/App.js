@@ -157,7 +157,7 @@ function App() {
             type="png"
             alt="Title Screen"
           />
-          <audio controls={false} volume={0.5} autoPlay loop>
+          <audio preload="auto" controls={false} volume={0.5} autoPlay loop>
             <source src="./assets/soundtrack.mp3" type="audio/mp3" />
           </audio>
           {/* play button to start the story intro video */}
