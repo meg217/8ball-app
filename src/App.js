@@ -67,6 +67,7 @@ function App() {
             onEnded={handleVideoEnd}
             controls={false}
           ></video>
+          <button onClick={handleBackClick}>Main Menu</button>
         </div>
       ) : showGameScreen ? (
         <div class="game-screen">
