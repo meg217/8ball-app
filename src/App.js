@@ -125,7 +125,7 @@ function App() {
                       backgroundColor: isButtonDisabled ? "gray" : "#007bff",
                     }}
                   >
-                    SHAKE
+                    Shake Magic 8-ball
                   </button>
                   <button
                     className="Random_Q_Button"
