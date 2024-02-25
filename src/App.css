@@ -143,6 +143,15 @@ video {
   font-weight: bold;
   text-align: center; /* Center align text */
 }
+input[type="text"] {
+  margin-left: -5%;
+  font-size: 30px;
+  width: 100%;
+  padding: 14px 20px;
+  height: 1vh;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
 
 .eightBallResponse {
   position: absolute;

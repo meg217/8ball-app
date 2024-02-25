@@ -12,6 +12,7 @@ function App() {
   const [showGameScreen, setShowGameScreen] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [showTextInput, setShowTextInput] = useState(false);
 
   useEffect(() => {
     console.log("Question state:", question);
@@ -25,6 +26,7 @@ function App() {
       .then((response) => {
         console.log("Fetched question:", response.data.question);
         setQuestion(response.data.question);
+        setShowTextInput(true);
       })
       .catch((error) => {
         console.error("Error fetching question:", error);
@@ -61,6 +63,13 @@ function App() {
   const handleBackClick = () => {
     setShowStoryIntro(false);
   };
+  const handleKeyDown = (event) => {
+    // Check if the Enter key is pressed
+    if (event.key === "Enter") {
+      // Trigger the click event of the submit button
+      document.getElementById("Shake").click();
+    }
+  };
 
   {
     /*TITLE SCREEN*/
@@ -91,9 +100,18 @@ function App() {
                 <img src="Dino_Hands.png" alt="Dino Hands" />
               </div>
               <div className="questionContainer">
-                <p>{question}</p>
+                <div>
+                  {showTextInput && (
+                    <label>
+                      Question:
+                      <input type="text" onKeyDown={handleKeyDown} />
+                    </label>
+                  )}
+                </div>
+                {/* <p>Question: {question}</p> */}
                 <div class="two_questions">
                   <button
+                    id="Shake"
                     className="Ask_Ball_Button"
                     onClick={handleMagic8BallClick}
                     disabled={isButtonDisabled}
