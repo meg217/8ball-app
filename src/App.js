@@ -23,16 +23,6 @@ function App() {
     setIsButtonDisabled(false);
   }, []);
 
-  const loadAudio = () => {
-    if (!audioLoaded) {
-      const audio = new Audio("./assets/soundtrack.mp3");
-      audio.volume = 0.5;
-      audio.loop = true;
-      audio.autoplay = true;
-      audio.load();
-      setAudioLoaded(true);
-    }
-  };
 
   const fetchQuestion = () => {
     axios
@@ -168,7 +158,6 @@ function App() {
             type="png"
             alt="Title Screen"
           />
-          {loadAudio()}
           <audio preload="auto" controls={false} volume={0.5} autoPlay loop>
             <source src="./assets/soundtrack.mp3" type="audio/mp3" />
           </audio>
