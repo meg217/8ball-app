@@ -5,6 +5,7 @@ import sqlite3
 import random
 
 app = Flask(__name__)
+CORS(app)
 
 # API endpoint to get random question
 @app.route('/api/question', methods=['GET'])
