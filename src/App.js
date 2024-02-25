@@ -79,7 +79,7 @@ function App() {
         <div>
           {/* pre-game story video */}
           <video
-            src="/assets/Copy of LastQuestionsofaDino (1).mp4"
+            src="./assets/Copy of LastQuestionsofaDino (1).mp4"
             type="video/mp4"
             autoPlay
             onEnded={handleVideoEnd}
@@ -91,15 +91,15 @@ function App() {
         <div className="game-screen">
           {/* Game screen content */}
           <audio controls={false} volume={0.5} autoPlay loop>
-            <source src="/assets/soundtrack.mp3" type="audio/mp3" />
+            <source src="./assets/soundtrack.mp3" type="audio/mp3" />
           </audio>
           <div className="containerB">
             <div className="background_container">
-              <img src="Dino_Background.png" alt="Dino Background" />
+              <img src="./Dino_Background.png" alt="Dino Background" />
             </div>
             <div className="absolute_container">
               <div className={`Dino_Hands ${isShaking ? "shaking" : ""}`}>
-                <img src="Dino_Hands.png" alt="Dino Hands" />
+                <img src="./Dino_Hands.png" alt="Dino Hands" />
               </div>
               <div className="questionContainer">
                 <div>
@@ -150,12 +150,12 @@ function App() {
           {/* Title screen */}
           <img
             class="Title_image"
-            src="/assets/Title.png"
+            src="./assets/Title.png"
             type="png"
             alt="Title Screen"
           />
           <audio controls={false} volume={0.5} autoPlay loop>
-            <source src="/assets/soundtrack.mp3" type="audio/mp3" />
+            <source src="./assets/soundtrack.mp3" type="audio/mp3" />
           </audio>
           {/* play button to start the story intro video */}
           <button class="Play" onClick={handlePlayClick}>
