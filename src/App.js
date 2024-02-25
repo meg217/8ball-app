@@ -50,6 +50,7 @@ function App() {
   const handleNextQuestionClick = () => {
     fetchQuestion();
     setResponse("");
+    document.getElementById("questionInput").value = question;
   };
 
   const handleVideoEnd = () => {
@@ -77,7 +78,7 @@ function App() {
   return (
     <div className="App">
       {showStoryIntro ? (
-        <div class="containerA">
+        <div>
           {/* Story Video Intro content */}
           <video
             src="/assets/LastQuestionsofaDino.mp4"
@@ -104,7 +105,11 @@ function App() {
                   {showTextInput && (
                     <label>
                       Question:
-                      <input type="text" onKeyDown={handleKeyDown} />
+                      <input
+                        id="questionInput"
+                        type="text"
+                        onKeyDown={handleKeyDown}
+                      />
                     </label>
                   )}
                 </div>
@@ -146,6 +151,10 @@ function App() {
             type="png"
             alt="Title Screen"
           />
+          <audio controls={false} volume={0.5} autoPlay loop>
+            <source src="/assets/soundtrack.mp3" type="audio/mp3" />
+            Your browser does not support the audio element.
+          </audio>
           {/* play button to start the story intro video */}
           <button class="Play" onClick={handlePlayClick}>
             PLAY

@@ -52,6 +52,7 @@
 
 .Dino_Hands {
   margin-bottom: -7%;
+  max-height: 60%;
 }
 
 .Title_Image {
@@ -85,18 +86,12 @@
 }
 
 video {
-  overflow: hidden;
-  max-width: 100%; /* Ensure image doesn't exceed container width */
-  max-height: 100%; /* Ensure image doesn't exceed container height */
-}
-
-.magic-8-ball {
-  width: 120px; /* Adjust size as needed */
-  height: 120px; /* Adjust size as needed */
-  background-color: #f0f0f0;
-  border-radius: 50%; /* Make it circular */
-  position: relative;
-  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .Dino_Hands.shaking {
@@ -155,15 +150,17 @@ input[type="text"] {
 
 .eightBallResponse {
   position: absolute;
-  top: calc(50% + 200px); /* Adjust top margin */
+  top: calc(50% + 120px);
   left: 50%;
   transform: translateX(-50%);
   font-weight: bold;
   color: white;
+  max-width: 70px;
 }
 
 img {
   height: 100%;
+  width: 100%;
 }
 
 .question {
