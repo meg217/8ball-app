@@ -12,7 +12,7 @@ function App() {
   const [showGameScreen, setShowGameScreen] = useState(false);
 
   useEffect(() => {
-    console.log("Fetching question...");
+    console.log("Question state:", question);
     fetchQuestion();
   }, []);
 

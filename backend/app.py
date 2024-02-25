@@ -1,5 +1,6 @@
 # app.py
 from flask import Flask, jsonify
+from flask_cors import CORS
 import sqlite3
 import random
 
@@ -12,6 +13,7 @@ def get_random_question():
         cursor = conn.cursor()
         cursor.execute('SELECT question FROM questions ORDER BY RANDOM() LIMIT 1')
         question = cursor.fetchone()[0]
+        print(question)
     return jsonify({'question': question})
 
 if __name__ == '__main__':
