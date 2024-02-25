@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="App">
       {showStoryIntro ? (
-        <div className="container">
+        <div class="container">
           {/* Story Video Intro content */}
           <video
             src="LastQuestionsofaDino.mp4"
@@ -69,7 +69,7 @@ function App() {
           ></video>
         </div>
       ) : showGameScreen ? (
-        <div className="game-screen">
+        <div class="game-screen">
           {/* Game screen content */}
           <h2>Game Screen</h2>
           <div class="questionContainer">
@@ -82,16 +82,16 @@ function App() {
           <button onClick={handleNextQuestionClick}>Next Question</button>
         </div>
       ) : (
-        <div className="container">
+        <div class="container">
           {/* Title Screen */}
           <img
-            className="Title_image"
+            class="Title_image"
             src="/assets/Title.png"
             type="png"
             alt="Title Screen"
           />
           {/* play button to start the story intro video */}
-          <button className="Play" onClick={handlePlayClick}>
+          <button class="Play" onClick={handlePlayClick}>
             PLAY
           </button>
         </div>
