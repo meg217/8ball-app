@@ -151,11 +151,39 @@ input[type="text"] {
 .eightBallResponse {
   position: absolute;
   top: calc(50% + 120px);
-  left: 50%;
-  transform: translateX(-50%);
+  float: center;
   font-weight: bold;
   color: white;
   max-width: 70px;
+}
+.eightBallResponse.shaking {
+  animation-name: shakeAppear;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes shakeAppear {
+  0% {
+    transform: translateX(0) rotate(0);
+    opacity: 0; /* Start with opacity 0 */
+  }
+  25% {
+    transform: translateX(-5px) rotate(2deg);
+    opacity: 0.3; /* Opacity halfway through the animation */
+  }
+  50% {
+    transform: translateX(5px) rotate(-2deg);
+    opacity: 0.5; /* Opacity at the peak of the animation */
+  }
+  75% {
+    transform: translateX(-5px) rotate(2deg);
+    opacity: 0.8; /* Opacity halfway through the animation */
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1; /* Full opacity at the end */
+  }
 }
 
 img {

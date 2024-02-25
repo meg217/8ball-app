@@ -92,6 +92,9 @@ function App() {
       ) : showGameScreen ? (
         <div className="game-screen">
           {/* Game screen content */}
+          <audio controls={false} volume={0.5} autoPlay loop>
+            <source src="/assets/soundtrack.mp3" type="audio/mp3" />
+          </audio>
           <div className="containerB">
             <div className="background_container">
               <img src="Dino_Background.png" alt="Dino Background" />
@@ -135,7 +138,9 @@ function App() {
                 </div>
               </div>
               {response && (
-                <div className="eightBallResponse">
+                <div
+                  className={`eightBallResponse ${isShaking ? "shaking" : ""}`}
+                >
                   <p>{response}</p>
                 </div>
               )}
@@ -153,7 +158,6 @@ function App() {
           />
           <audio controls={false} volume={0.5} autoPlay loop>
             <source src="/assets/soundtrack.mp3" type="audio/mp3" />
-            Your browser does not support the audio element.
           </audio>
           {/* play button to start the story intro video */}
           <button class="Play" onClick={handlePlayClick}>
