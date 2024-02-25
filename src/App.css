@@ -27,10 +27,27 @@
 .App-link {
   color: #61dafb;
 }
-
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust this value as needed */
+  overflow: hidden; /* Prevent horizontal scrolling */
+}
 .Title_Image {
   max-width: 100%; /* Ensure image doesn't exceed container width */
   max-height: 100%; /* Ensure image doesn't exceed container height */
+}
+.Play {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: rgb(94, 191, 224);
+  width: 230px;
+  height: 95px;
+  position: absolute;
+  bottom: 180px;
+  border-radius: 40px;
 }
 
 @keyframes App-logo-spin {
@@ -43,18 +60,8 @@
 }
 
 video {
-  width: 100%;
-  flex: auto;
-  max-width: 800px;
-  height: auto;
-  margin: auto;
-  overflow: hidden;
-}
-
-video {
-  width: 100%;
-  max-width: 800px; /* Adjust max-width as needed */
-  margin: 20px auto; /* Center the video */
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  max-height: 100%; /* Ensure image doesn't exceed container height */
 }
 
 .magic-8-ball {
