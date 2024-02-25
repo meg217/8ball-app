@@ -153,7 +153,7 @@ textarea {
 
 .eightBallResponse {
   position: absolute;
-  top: calc(50% + 120px);
+  top: calc(50% + 135px);
   float: center;
   font-weight: bold;
   color: white;
