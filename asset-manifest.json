@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/8ball-app/static/css/main.de3579f7.css",
-    "main.js": "/8ball-app/static/js/main.37621466.js",
+    "main.js": "/8ball-app/static/js/main.8b8fabe1.js",
     "static/js/453.655d4d1a.chunk.js": "/8ball-app/static/js/453.655d4d1a.chunk.js",
     "index.html": "/8ball-app/index.html",
     "main.de3579f7.css.map": "/8ball-app/static/css/main.de3579f7.css.map",
-    "main.37621466.js.map": "/8ball-app/static/js/main.37621466.js.map",
+    "main.8b8fabe1.js.map": "/8ball-app/static/js/main.8b8fabe1.js.map",
     "453.655d4d1a.chunk.js.map": "/8ball-app/static/js/453.655d4d1a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.de3579f7.css",
-    "static/js/main.37621466.js"
+    "static/js/main.8b8fabe1.js"
   ]
 }
